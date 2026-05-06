@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Lincoln Bakali</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+            font-family: Arial, sans-serif;
+            color: white;
+            line-height: 1.6;
+        }
+
+        /* NAVBAR */
+        nav {
+            background-color: mediumvioletred;
+            color: white;
+            height: 70px;
+            border-radius: 0 0 20px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+        }
+
+        nav h2 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+
+        nav div {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1em;
+            transition: text-decoration 0.3s ease;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* MAIN CONTENT */
+        .page-header {
+            text-align: center;
+            padding: 50px 20px 30px;
+        }
+
+        .page-header h1 {
+            font-size: 2.5em;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .page-header p {
+            color: #ccc;
+            font-size: 1.1em;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+    
+        .projects-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        
+        .project-card {
+            background-color: #111;
+            border: 2px solid mediumvioletred;
+            border-radius: 10px;
+            padding: 25px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(199, 21, 133, 0.3);
+        }
+
+        .project-card h3 {
+            color: mediumvioletred;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .project-card p {
+            color: #ccc;
+            margin-bottom: 15px;
+            font-size: 1em;
+            line-height: 1.5;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .tech-badge {
+            background-color: rgb(106, 35, 85);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 10px;
+        }
+
+        .project-links a {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            color: white;
+            font-size: 0.95em;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-view {
+            background-color: mediumvioletred;
+        }
+
+        .btn-view:hover {
+            background-color: #c9159f;
+        }
+
+        .btn-code {
+            background-color: rgb(106, 35, 85);
+        }
+
+        .btn-code:hover {
+            background-color: #8a2c6e;
+        }
+
+        /* EMPTY STATE */
+        .no-projects {
+            text-align: center;
+            padding: 60px 20px;
+            color: #ccc;
+        }
+
+        .no-projects p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: mediumvioletred;
+            color: white;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        
+        @media (max-width: 768px) {
+            nav {
+                padding: 0 20px;
+                flex-direction: column;
+                height: auto;
+                gap: 15px;
+            }
+
+            nav div {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .page-header h1 {
+                font-size: 2em;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-links {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                padding: 0 15px;
+            }
+
+            nav a {
+                font-size: 0.9em;
+                margin-left: 10px;
+            }
+
+            .page-header h1 {
+                font-size: 1.8em;
+            }
+
+            .project-card {
+                padding: 15px;
+            }
+
+            .project-card h3 {
+                font-size: 1.3em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <h2>Lincoln</h2>
+            <div>
+                <a href="Portfolio/home.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="contacts.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h1>My Projects</h1>
+        <p>Explore some of the projects I've built while learning web development and Python.</p>
+    </section>
+
+    <div class="projects-container">
+        <div class="projects-grid">
+            
+        
+            <div class="project-card">
+                <h3>Portfolio Website</h3>
+                <p>A personal portfolio website built with HTML, CSS, and JavaScript. Features a responsive design, smooth navigation, and multiple pages showcasing my skills and projects.</p>
+                <div class="project-tech">
+                    <span class="tech-badge">HTML</span>
+                    <span class="tech-badge">CSS</span>
+                    <span class="tech-badge">JavaScript</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="btn-view">View Live</a>
+                    <a href="#" class="btn-code">View Code</a>
+                </div>
+            </div>
+
+        
+            <div class="project-card">
+                <h3>Django Task Manager</h3>
+                <p>A simple task management application built with Django and Python. Allows users to create, update, and delete tasks with a clean and intuitive interface.</p>
+                <div class="project-tech">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">Django</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="btn-view">View Live</a>
+                    <a href="#" class="btn-code">View Code</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Weather App</h3>
+                <p>A weather forecast application that displays current weather and forecasts. Built with HTML, CSS, and integrated with a weather API for real-time data.</p>
+                <
+
+            <!-- Project 4 -->
+            <div class="project-card">
+                <h3>Python Calculator</h3>
+                <p>A fully functional calculator application built with Python. Supports basic operations and demonstrates understanding of Python fundamentals and logic.</p>
+                <div class="project-tech">
+                    <span class="tech-badge">Python</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="btn-view">View Live</a>
+                    <a href="#" class="btn-code">View Code</a>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="project-card">
+                <h3>Quiz Application</h3>
+                <p>An interactive quiz application with multiple choice questions. Users can test their knowledge with instant feedback on their answers.</p>
+                <div class="project-tech">
+                    <span class="tech-badge">HTML</span>
+                    <span class="tech-badge">CSS</span>
+                    <span class="tech-badge">JavaScript</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="btn-view">View Live</a>
+                    <a href="#" class="btn-code">View Code</a>
+                </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="project-card">
+                <h3>Todo List App</h3>
+                <p>A simple yet effective todo list application for managing daily tasks. Features include adding, editing, and deleting tasks with local storage persistence.</p>
+                <div class="project-tech">
+                    <span class="tech-badge">HTML</span>
+                    <span class="tech-badge">CSS</span>
+                    <span class="tech-badge">JavaScript</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="btn-view">View Live</a>
+                    <a href="#" class="btn-code">View Code</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Lincoln Bakali. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
